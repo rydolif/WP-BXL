@@ -1,0 +1,127 @@
+.form
+
+	&__line
+		position: relative
+		margin-bottom: 10px
+
+		&:last-child
+			margin-bottom: 0
+
+	&__textarea
+		margin-bottom: 20px
+
+	&__file
+		text-align: right
+		color: #676767
+		margin-bottom: 20px
+
+		br
+			display: none
+
+		input
+			display: none
+
+		svg
+			position: relative
+			bottom: 0
+			fill: $accent
+			width: 28px
+			margin-left: 15px
+			transition: all .6s
+
+		label
+			cursor: pointer
+
+			&:hover,
+			&:focus
+				color: $accent
+				transition: all .6s
+
+				svg
+					bottom: -10px
+
+	&__btn
+		display: flex
+		justify-content: flex-end
+
+	&__check
+		margin-bottom: 40px
+
+		a
+			color: #676767
+			text-decoration: underline
+
+			&:hover,
+			&:focus
+				color: $accent
+
+		.wpcf7-list-item-label
+			position: relative
+			padding-left: 50px
+			color: #676767
+			cursor: pointer
+			line-height: 1.2
+			font-weight: 300
+			margin-bottom: 0
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+
+			&::before
+				top: 5px
+				width: 22px
+				height: 22px
+				border-radius: 3px
+				border: 1px solid #c3c3c3
+
+			&::after
+				width: 14px
+				height: 14px
+				border-radius: 3px
+				border: 1px solid $accent
+				background: $accent
+				left: 4px
+				top: 9px
+				transition: all .6s
+
+		input[type="checkbox"]
+			display: none
+
+		input[type="checkbox"]:checked + .wpcf7-list-item-label::after
+			transform: scale(1)
+
+		input[type="checkbox"] + .wpcf7-list-item-label::after
+			transform: scale(0)
+
+	label.error
+		position: absolute
+		bottom: -25px
+		right: 25px
+		left: 25px
+		transition: all .3s
+		animation: error .3s linear 1 forwards
+		color: #fff
+		text-align: center
+		font-weight: 600
+		background-color: red
+		border-radius: 10px
+		font-size: 14px
+
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			top: -8px
+			transform: translate(-50%, 0)
+			border-bottom: 4px solid red
+			border-left: 4px solid transparent
+			border-right: 4px solid transparent
+			border-top: 4px solid transparent
+
+
+
+
+

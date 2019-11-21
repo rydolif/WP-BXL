@@ -1,0 +1,594 @@
+@media only screen and (max-width : 1440px)
+	body
+		font-size: 16px
+
+	h1
+		margin-bottom: 30px
+
+	h2
+		margin-bottom: 30px
+
+	.container
+		max-width: 1200px
+
+	.modal
+		max-width: 480px
+		padding: 30px
+
+		&__accent
+			margin-bottom: 20px
+
+	.form
+		&__file,
+		&__check,
+		&__textarea
+			margin-bottom: 20px
+
+
+	.certificates__slider
+		padding-left: 135px
+
+	.contacts
+
+		&__form,
+		&__info
+			width: 48%
+
+		&__info
+			p
+				margin-bottom: 30px
+
+		&__form
+			&_header
+				padding-left: 80px
+				padding-right: 80px
+			&_content
+				padding: 40px 80px
+
+	.header
+		&__logo
+			p
+				margin-left: 10px
+				font-size: 12px
+
+			img
+				width: 80px
+
+	.hero
+		padding: 
+			top: 140px
+			bottom: 180px
+
+	.main
+		padding: 40px 0
+
+		&__filter
+			width: 30%
+
+			&_header
+				margin-bottom: 20px
+
+			&_cat
+				padding: 15px 15px 15px 0
+
+		&__content
+			width: 67%
+
+			&_search
+				margin-bottom: 20px
+
+			&_list,
+			&_text
+				margin-bottom: 30px
+
+			&_icon,
+			&_list
+				div
+					width: 170px
+
+
+@media only screen and (max-width : 1200px)
+	h1
+		font-size: 34px
+
+	h2, h3
+		font-size: 22px
+
+	.container
+		max-width: 992px
+
+	.grums
+		padding: 25px 0
+
+	.tovar
+		&__production
+			li
+				padding-right: 5px
+
+	.news
+		padding: 40px 0
+
+		&__list
+			margin-bottom: 30px
+
+			p
+				margin-bottom: 15px
+
+		&__item
+			&_text
+				padding: 15px
+
+
+	.certificates
+		&__slider
+			padding-left: 55px
+
+		&__content p
+			margin-bottom: 20px
+
+	.contacts
+		&__info
+			p
+				margin-bottom: 20px
+
+				span
+					margin-bottom: 20px
+
+		&__form
+			&_header
+				padding: 20px 60px
+			&_content
+				padding: 30px 60px
+
+	.header
+		padding: 10px 0
+
+		&__logo
+			p
+				display: none
+
+	.info
+		padding: 20px 0
+
+		&__header
+			margin-bottom: 20px
+
+		&__col
+			max-width: 280px
+			min-width: 280px
+
+		&__tel
+			margin-bottom: 20px
+
+	.main__content
+		&_list
+			b
+				font-size: 28px
+
+		&_icon
+			justify-content: space-around
+
+			svg
+				margin-bottom: 10px
+
+			div
+				width: 40%
+				margin-bottom: 15px
+
+
+@media only screen and (max-width : 992px)
+	body
+		font-size: 14px
+		padding-top: 70px
+
+	h1
+		font-size: 30px
+
+	h2, h3
+		font-size: 20px
+
+	.container
+		max-width: 767px
+
+	.modal
+		max-width: 480px
+		padding: 30px
+
+		&__accent
+			margin-bottom: 20px
+
+	.form
+
+		&__check,
+		&__file,
+		&__textarea
+			margin-bottom: 20px
+
+	.btn
+		font-size: 14px
+
+	.tovar
+
+		&__production
+			margin-top: 30px
+
+			h2
+				margin-bottom: 20px
+
+	.news
+		padding: 40px 0
+		
+		&__list
+			margin-bottom: 20px
+
+			p
+				margin-bottom: 10px
+
+		&__item
+			&_text
+				padding: 10px
+
+	.article
+		padding-bottom: 40px
+	
+	.certificates
+		padding-bottom: 40px
+
+		&::before
+			left: 0
+			width: 100%
+			top: auto
+			height: 50%
+
+		&__slider
+			width: 50%
+			margin: 0 auto 30px
+			padding-left: 30px
+			
+		&__content
+			width: 100%
+
+			p
+				margin-bottom: 15px
+
+	.contacts
+		&__info
+			p
+				margin-bottom: 15px
+
+				span
+					margin-bottom: 15px
+
+		&__form
+			&_header
+				padding: 10px 30px
+
+			&_content
+				padding: 20px 30px
+
+			&_mail
+				margin-bottom: 15px
+
+	.hamburger
+		display: block
+
+	.header
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		z-index: 1001
+		padding: 5px 0
+
+		&__logo
+			align-items: center
+
+			p
+				display: block
+
+		&__container
+			padding-right: 70px
+
+		&__nav
+			position: fixed
+			top: -120%
+			left: 0
+			right: 0
+			height: 100vh
+			width: 100vw
+			background-color: #fff
+			text-align: center
+			z-index: -1
+			transition: all .6s
+			overflow: auto
+			font-size: 20px
+			flex-direction: column
+			justify-content: flex-start
+			padding: 40px 40px 90px
+
+			li
+				margin-right: 0
+
+			a
+				display: block
+				padding: 15px
+
+				&:hover,
+				&:focus
+					background-color: rgba(#e1e1e1, .2)
+
+			&--active
+				top: 70px
+	
+	.hero
+		padding: 100px 0
+		background-position: left
+
+		&__video
+			font-size: 18px
+			bottom: -70px
+
+			a
+				left: 190px
+				bottom: 75px
+
+	.main
+		&__content_list 
+			div
+				width: 48%
+
+			b
+				margin-bottom: 0
+
+		&__filter
+			&_header
+				padding: 5px
+				margin-bottom: 10px
+
+			&_cat
+				li
+					padding-left: 5px
+					margin-bottom: 10px
+
+				a
+					&::before
+						margin-right: 5px
+
+	.info
+		br
+			display: none
+
+		&__container
+			justify-content: space-around
+
+		&__col
+			margin-bottom: 20px
+
+			&:last-child
+				margin-bottom: 0
+
+		&__header
+			margin-bottom: 15px
+
+	.footer
+		font-size: 14px
+		padding: 15px 0
+
+
+@media only screen and (max-width : 767px)
+	.container
+		max-width: 576px
+
+	.grums
+		padding: 20px 0
+
+	.news
+		&__item
+			width: 33%
+
+	.btn--hero
+		max-width: 280px
+
+
+	.certificates
+		&__slider
+			height: 340px
+
+		&__pagination span
+			margin: 15px 0 !important
+
+	.contacts
+		padding: 40px 0
+		text-align: center
+
+		&::before
+			height: 150px
+
+		&__info,
+		&__form
+			width: 100%
+
+		&__info
+			margin-bottom: 20px
+
+			p
+				margin-bottom: 15px
+				line-height: 1.4
+				span
+					margin-bottom: 5px
+
+		&__form
+			max-width: 420px
+			margin: 0 auto
+
+			label
+				text-align: left
+
+		&__soc
+			margin-bottom: 20px
+			justify-content: center
+			
+
+	.main
+		padding-top: 0
+
+	.header__logo
+		p
+			font-size: 12px
+
+	.main__content
+
+		&_list
+			margin-bottom: 15px
+
+		&_icon
+			div
+				width: 48%
+
+				&:last-child
+					margin-bottom: 0
+
+			svg
+				width: 50px
+
+	.info
+		&__col
+			min-width: 265px
+
+		&__form
+			margin-bottom: 15px
+
+			&_line
+				margin-bottom: 15px
+
+
+@media only screen and (max-width : 576px)
+	.container
+		max-width: 100%
+
+	.form
+
+		input,
+		textarea
+			font-size: 14px
+
+			&::placeholder
+				font-size: 14px
+
+		input
+			height: 45px
+			line-height: 45px
+
+			&::placeholder
+				line-height: 45px
+
+	.news
+		&__item
+			width: 50%
+
+	.certificates
+		&__slider
+			width: 100%
+			height: 470px
+		
+		&__slide
+			img
+				max-width: 100%
+
+	.contacts
+		h2
+			margin-bottom: 15px
+
+		p
+			margin-bottom: 10px
+
+	.header__logo	
+		p
+			display: none
+
+	.main
+		&__filter
+			width: 100%
+			order: 1
+
+		&__content
+			width: 100%
+			margin-bottom: 20px
+
+	.info
+		text-align: center
+
+		&__header
+			justify-content: space-around
+
+
+@media only screen and (max-width : 480px)
+	h1
+		font-size: 28px
+
+	h2, h3
+		font-size: 18px
+
+	.modal
+		padding: 15px
+
+	.btn--hero
+		max-width: 255px
+
+	.tovar__content img
+		margin-right: 0
+		max-width: 100%
+
+	.news
+		&__item
+			width: 100%
+
+	.certificates
+		&::before
+			height: 60%
+
+		&__slider
+			height: 350px
+
+	.contacts__form
+		&_content,
+		&_header
+			padding: 10px
+
+
+	.article
+		&__content
+			img
+				min-width: 100%
+				margin-right: 0
+
+	.header
+		&__container
+			padding-right: 60px
+		&__soc
+			display: none
+
+	.hero
+		padding: 50px 0
+		background-position: -100px center
+
+		.btn
+			margin-bottom: 40px
+
+		&__video
+			position: relative
+			right: auto
+			left: auto
+			bottom: 0
+
+			&_arrow
+				display: none
+
+			a
+				bottom: auto
+				left: auto
+				right: 40px
+				margin-right: 0
+				margin-left: auto
+
+	.main
