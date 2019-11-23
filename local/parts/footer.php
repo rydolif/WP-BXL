@@ -38,16 +38,14 @@
 				</div>
 				<div class="info__form">
 					<div class="info__form_line">
-						<input type="email" placeholder="Ваш email" required>
-						<button class="btn btn--info">Подписаться</button>
+						<?php the_field('subscription', 'option'); ?>
 					</div>
 					<p>
 						Нажимая на кнопку "Подписаться", вы даете <br>согласие на <a href="<?php the_field('policy', 'option'); ?>" target="_blank">обработку своих персональных <br>данных</a>
 					</p>
 				</div>
 				<div class="info__stat">
-					<p>Рамблер <br>ТОР 100</p>
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/info__stat.png" alt="">
+					<?php the_field('stat', 'option'); ?>
 				</div>
 				
 			</div>

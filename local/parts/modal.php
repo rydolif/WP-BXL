@@ -6,7 +6,7 @@
 			<span></span>
 		</button>
 
-		<?php echo do_shortcode( '[contact-form-7 id="37" title="Уважаемые клиент!"]' ); ?>
+		<?php the_field('modal_client', 'option'); ?>
 
 	</div>
 	
@@ -17,7 +17,7 @@
 			<span></span>
 		</button>
 
-		<?php echo do_shortcode( '[contact-form-7 id="40" title="Уважаемые партнеры!"]' ); ?>
+		<?php echo do_shortcode( '' ); ?>
 
 	</div>
 	
@@ -28,6 +28,6 @@
 			<span></span>
 		</button>
 
-		<?php echo do_shortcode( '[contact-form-7 id="41" title="Заказать дзвонок"]' ); ?>
+		<?php echo do_shortcode( '' ); ?>
 
 	</div>

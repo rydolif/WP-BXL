@@ -194,6 +194,7 @@
 
 		.menu-item-has-children
 			position: relative
+			cursor: pointer
 
 			&::before
 				content: ''
@@ -212,11 +213,14 @@
 			&:focus
 				color: $accent !important
 
-				&::before
-					transform: translate(0, 0) rotate(45deg)
-
+			a
+				pointer-events: none
+				
 			ul
 				margin-top: 20px
+
+				a
+					pointer-events: auto
 
 				li
 					padding: 0
@@ -366,7 +370,7 @@
 		background-color: #fff
 		font-size: 16px
 		color: #454545
-		padding: 0 20px
+		padding: 0 20px !important
 		height: 30px
 		line-height: 30px
 
@@ -416,7 +420,10 @@
 
 		&_line
 			display: flex
-			margin-bottom: 20px
+			margin-bottom: 20px !important
+
+		div
+			margin: 0
 
 		p
 			font-size: 14px
@@ -947,6 +954,96 @@
 
 	&:last-child
 		border-bottom: 0
+
+span.wpcf7-not-valid-tip
+	position: absolute
+	font-size: 12px
+
+div.wpcf7-validation-errors, 
+div.wpcf7-acceptance-missing,
+div.wpcf7-mail-sent-ok
+	margin: 0
+	font-size: 12px
+	border: 0
+	color: red
+	text-align: center
+	
+div.wpcf7-mail-sent-ok
+	color: green
+	font-size: 14px
+
+div.wpcf7 .ajax-loader
+	display: none
+
+
+	
+.mailpoet_submit
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	border: none
+	outline: none
+	text-align: center
+	border: none
+	border-radius: 5px
+	transition: all .6s
+	letter-spacing: .2px
+	font-weight: 600 !important
+	text-transform: uppercase
+	background-color: $accent !important
+	font-size: 16px !important
+	color: #fff !important
+	border-radius: 0
+	height: 30px
+	text-transform: none
+	padding: 0 5px !important
+
+	&:hover,
+	&:focus
+		outline: none
+		text-decoration: none
+		color: #fff
+		background-color: $accent
+		box-shadow: 0 0 5px rgba($accent, 1)
+		cursor: pointer
+
+.mailpoet_form
+	display: flex !important
+	position: relative
+	
+
+// .mailpoet_message
+// 	width: 100%
+
+.mailpoet_paragraph
+	input
+		padding: 0 5px !important
+
+.parsley-errors-list.filled
+	position: absolute
+	background-color: red
+	padding: 3px
+	border-radius: 3px
+	text-align: center
+	
+
+	li
+		color: #fff !important
+
+.mailpoet_validate_success
+	position: absolute
+	top: 100%
+	background-color: green
+	padding: 3px
+	border-radius: 3px
+	text-align: center
+	color: #fff !important
+
+.mailpoet_paragraph input
+	max-width: 200px
+	width: 100% !important
+	
 
 
 @import "media" // Always at the end

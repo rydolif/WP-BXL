@@ -33,7 +33,7 @@ $(function() {
 //------------------------------acardeon---------------------------
   $(".filter .sub-menu").slideUp("slow");
 
-  $('.filter .menu-item-has-children').hover(function(event){
+  $('.filter .menu-item-has-children').click(function(event){
     $(this).toggleClass('main__filter_cat--active');
 
     if ($(this).hasClass('main__filter_cat--active')) {
@@ -43,6 +43,8 @@ $(function() {
       $(".filter .menu-item-has-children ul").slideUp("slow");
     }
   });
+
+
 
 //-------------------------------активна ссылка меню---------------------------------------
   $('.header__nav a').each(function () {

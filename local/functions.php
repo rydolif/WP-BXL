@@ -28,17 +28,17 @@
   add_action( 'after_setup_theme', 'myfirsttheme_setup' );
 
 //------------------чистка від лишнього ----------------------
-    remove_action('wp_head','feed_links_extra', 3); // убирает ссылки на rss категорий
-    remove_action('wp_head','feed_links', 2); // минус ссылки на основной rss и комментарии
-    remove_action('wp_head','rsd_link');  // сервис Really Simple Discovery
-    remove_action('wp_head','wlwmanifest_link'); // Windows Live Writer
-    remove_action('wp_head','wp_generator');  // скрыть версию wordpress
-    function modify_jquery() {
-            if (!is_admin()) {           
-            wp_deregister_script('jquery');
-            }
-    }
-    add_action('init', 'modify_jquery');
+    // remove_action('wp_head','feed_links_extra', 3); // убирает ссылки на rss категорий
+    // remove_action('wp_head','feed_links', 2); // минус ссылки на основной rss и комментарии
+    // remove_action('wp_head','rsd_link');  // сервис Really Simple Discovery
+    // remove_action('wp_head','wlwmanifest_link'); // Windows Live Writer
+    // remove_action('wp_head','wp_generator');  // скрыть версию wordpress
+    // function modify_jquery() {
+    //         if (!is_admin()) {           
+    //         wp_deregister_script('jquery');
+    //         }
+    // }
+    // add_action('init', 'modify_jquery');
 
 //------------------delet Post Type ----------------------
   function remove_menus(){
