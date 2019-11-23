@@ -28,8 +28,6 @@
 
 				<?php get_template_part( 'parts/search' ); ?>
 
-				<h2>Компания БХЛ это:</h2>
-
 				<?php
 					if( have_rows('content') ):
 

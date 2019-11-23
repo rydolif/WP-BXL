@@ -17,7 +17,7 @@
 			<span></span>
 		</button>
 
-		<?php echo do_shortcode( '' ); ?>
+		<?php the_field('modal_partners', 'option'); ?>
 
 	</div>
 	
@@ -28,6 +28,6 @@
 			<span></span>
 		</button>
 
-		<?php echo do_shortcode( '' ); ?>
+		<?php the_field('modal_order', 'option'); ?>
 
 	</div>
