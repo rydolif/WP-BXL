@@ -10,9 +10,14 @@
 
 
 .header
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
 	padding: 15px 0
 	background-color: #fff
 	box-shadow: 0 0 5px 0 rgba(#555555, .6)
+	z-index: 1110
 
 	&__container
 		position: relative
@@ -436,6 +441,13 @@
 				&:hover,
 				&:focus
 					color: $accent
+
+		.btn
+			width: 100%
+
+			&:hover,
+			&:focus
+				color: #fff !important
 
 	&__stat
 		display: flex
@@ -875,6 +887,7 @@
 			max-width: 50%
 			margin-right: 5%
 			margin-bottom: 5%
+			height: auto
 
 		p
 			line-height: 1.7
@@ -1119,6 +1132,7 @@ div.wpcf7 .ajax-loader
 		position: relative
 		width: 30px
 		height: 30px
+		cursor: pointer
 
 		&::before
 			content: ''

@@ -26,15 +26,13 @@
 
 			<div class="main__content">
 
-				<?php get_template_part( 'parts/search' ); ?>
-
+<!-- 				<?php get_template_part( 'parts/search' ); ?>
+ -->
 				<div class="products__header">
 					<h2>Популярное</h2>
 					<div class="products__prev"></div>
 					<div class="products__next"></div>
 				</div>
-
-				
 
 				<div class="products__slider swiper-container">
 					<div class="swiper-wrapper">
@@ -75,7 +73,7 @@
 									<?php endif; ?>
 								</p>
 								<span class="products__text">Цена за штуку</span>
-								<a href="#" class="btn btn--hero products--<?php echo $post_id; ?>_open">Купить</a>
+								<a href="#" data-title="<?php the_title(); ?>" class="btn btn--products btn--hero products--<?php echo $post_id; ?>_open">Купить</a>
 							</div>
 
 							<div class="modal" id="products--<?php echo $post_id; ?>">
@@ -84,17 +82,9 @@
 									<span></span>
 									<span></span>
 								</button>
-
-								<?php 
-
-									$title = get_the_title();
-								
-								?>
-
 								<p class="modal__title">Заказать <br><?php echo $title; ?></p>
 
-
-								<?php echo do_shortcode('[contact-form-7 id="272" title="$title"]'); ?>
+								<?php echo do_shortcode('[contact-form-7 id="270" title="Заказать товар"]'); ?>
 
 							</div>
 

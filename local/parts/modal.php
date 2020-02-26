@@ -31,3 +31,14 @@
 		<?php the_field('modal_order', 'option'); ?>
 
 	</div>
+
+	<div class="modal" id="subscribe">
+
+		<button class="modal__close subscribe_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+
+		<?php the_field('subscription', 'option'); ?>
+
+	</div>

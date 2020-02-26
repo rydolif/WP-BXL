@@ -1,5 +1,12 @@
 $(function() {
 
+  $('.btn--products').click(function(){
+    title = $(this).attr('data-title');
+
+    $('.services').val(title)
+    console.log(title);
+  });
+
 //-------------------------------products---------------------------------------
   var swiper = new Swiper('.products__slider', {
     slidesPerView: 3,
@@ -64,7 +71,19 @@ $(function() {
     }
   });
 
-
+//----------------------------------------fixed----------------------------------
+  $(window).scroll(function(){
+      if($(this).scrollTop()>20){
+          $('.header').addClass('header--active');
+      }
+      else if ($(this).scrollTop()<20){
+          $('.header').removeClass('header--active');
+      }
+  });
+  
+  if($(this).scrollTop()>20){
+      $('.header').addClass('header--active');
+  }
 
 //-------------------------------активна ссылка меню---------------------------------------
   $('.header__nav a').each(function () {
@@ -92,4 +111,3 @@ $(function() {
       $('body,html').animate({scrollTop: top - 30}, 'slow', 'swing');
   });
 });
-

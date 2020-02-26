@@ -36,14 +36,14 @@
 				<div class="info__header">
 					<h3>Подписка на новости</h3>
 				</div>
-				<div class="info__form">
+<!-- 				<div class="info__form">
 					<div class="info__form_line">
-						<?php the_field('subscription', 'option'); ?>
+						<a href="#" class="btn btn--hero subscribe_open">Подписаться</a>
 					</div>
 					<p>
 						Нажимая на кнопку "Подписаться", вы даете <br>согласие на <a href="<?php the_field('policy', 'option'); ?>" target="_blank">обработку своих персональных <br>данных</a>
 					</p>
-				</div>
+				</div> -->
 				<div class="info__stat">
 					<?php the_field('stat', 'option'); ?>
 				</div>
