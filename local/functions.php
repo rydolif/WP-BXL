@@ -104,6 +104,7 @@
     }
     add_action( 'init', 'novosti_post_type', 0 );
 
+
 //------------------Register Custom Post товары----------------------
     function catalog_post_type() {
         $labels = array(
@@ -135,6 +136,40 @@
         register_post_type( 'catalog', $args );
     }
     add_action( 'init', 'catalog_post_type', 0 );
+
+
+//------------------Register Custom Post товары----------------------
+    function tovar_post_type() {
+        $labels = array(
+            'name'                  => _x( 'Товар', 'Post Type General Name', 'text_domain' ),
+            'singular_name'         => _x( 'Товар', 'Post Type Singular Name', 'text_domain' ),
+            'menu_name'             => __( 'Товар', 'text_domain' ),
+            'all_items'             => __( 'Товар', 'text_domain' ),
+            'add_new_item'          => __( 'Добавить Товар', 'text_domain' ),
+            'add_new'               => __( 'Добавить Товар', 'text_domain' ),
+        );
+        $args = array(
+            'label'                 => __( 'Бренды', 'text_domain' ),
+            'labels'                => $labels,
+            'supports'              => array( 'title', 'thumbnail'),// 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+            'hierarchical'          => false,
+            'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'menu_position'         => 4,
+            'menu_icon'             => 'dashicons-images-alt2',
+            'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
+            'can_export'            => true,
+            'has_archive'           => true,
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+            'capability_type'       => 'page',
+        );
+        register_post_type( 'tovar', $args );
+    }
+    add_action( 'init', 'tovar_post_type', 0 );
+
 
 //------------------ "Хлебные крошки" для WordPress----------------------
   function dimox_breadcrumbs() {
@@ -313,6 +348,7 @@
       echo $wrap_after;
     }
   } // end of dimox_breadcrumbs()
+
 
 //------------------пагинация----------------------
     function wptuts_pagination( $args = array() ) {

@@ -1,5 +1,25 @@
 $(function() {
-  
+
+//-------------------------------products---------------------------------------
+  var swiper = new Swiper('.products__slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: '.products__pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.products__next',
+      prevEl: '.products__prev',
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+    }
+  });
+
 //-------------------------------попандер---------------------------------------
   var swiper = new Swiper('.certificates__slider', {
     direction: 'vertical',

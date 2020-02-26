@@ -28,6 +28,84 @@
 
 				<?php get_template_part( 'parts/search' ); ?>
 
+				<div class="products__header">
+					<h2>Популярное</h2>
+					<div class="products__prev"></div>
+					<div class="products__next"></div>
+				</div>
+
+				
+
+				<div class="products__slider swiper-container">
+					<div class="swiper-wrapper">
+
+						<?php
+							$args = array(
+							'post_type' => 'tovar',
+							'posts_per_page' => -1,
+							);
+
+							$query = new WP_Query( $args );
+
+							while ( $query->have_posts() ): $query->the_post();
+
+							$post_id = get_the_ID();
+
+						?>
+
+							<div class="products__slide swiper-slide">
+								<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+								<h3><?php the_title(); ?></h3>
+								<p class="products__number"><?php the_field('number'); ?></p>
+								<p class="products__price">
+									<?php if( get_field('price_no-sale') ): ?>
+										<span class="products__price--no-sale">
+											<?php the_field('price_no-sale'); ?>
+										</span>
+									<?php endif; ?>
+									<?php if( get_field('price_sale') ): ?>
+										<b class="products__price--sale">
+											<?php the_field('price_sale'); ?>
+										</b>
+									<?php endif; ?>
+									<?php if( get_field('price') ): ?>
+										<b class="products__price">
+											<?php the_field('price'); ?>
+										</b>
+									<?php endif; ?>
+								</p>
+								<span class="products__text">Цена за штуку</span>
+								<a href="#" class="btn btn--hero products--<?php echo $post_id; ?>_open">Купить</a>
+							</div>
+
+							<div class="modal" id="products--<?php echo $post_id; ?>">
+
+								<button class="modal__close products--<?php echo $post_id; ?>_close" type="button">
+									<span></span>
+									<span></span>
+								</button>
+
+								<?php 
+
+									$title = get_the_title();
+								
+								?>
+
+								<p class="modal__title">Заказать <br><?php echo $title; ?></p>
+
+
+								<?php echo do_shortcode('[contact-form-7 id="272" title="$title"]'); ?>
+
+							</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
+					</div>
+					<div class="products__pagination swiper-pagination"></div>
+
+				</div>
+
 				<?php
 					if( have_rows('content') ):
 

@@ -1046,4 +1046,129 @@ div.wpcf7 .ajax-loader
 	
 
 
+.products
+
+	&__slider
+		padding: 15px
+		padding-bottom: 70px
+		margin-bottom: 60px
+
+		h3
+			font-size: 16px
+			margin-bottom: 5px
+			text-transform: none
+
+		img
+			width: 100%
+			height: auto
+			margin-bottom: 20px
+
+	&__slide
+		padding: 20px
+		transition: all .6s
+
+		.btn
+			opacity: 0
+
+		&:hover,
+		&:focus
+			box-shadow: 0 0 5px 5px rgba($text, .1)
+			.btn
+				opacity: 1
+
+
+	&__number
+		color: #9a9a9a
+		font-size: 14px
+		margin-bottom: 10px
+
+	&__price
+		font-size: 24px
+		line-height: 1.2
+
+		&--sale
+			font-size: 24px
+			line-height: 1
+			color: #da3838
+
+		&--no-sale
+			font-size: 16px
+			color: #9a9a9a
+			text-decoration: line-through
+			margin-right: 15px
+	
+	&__text
+		font-size: 14px
+		color: #9a9a9a
+		display: block
+		margin-bottom: 15px
+
+	&__header
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin-bottom: 30px
+
+		h2
+			margin:
+				bottom: 0
+				right: 25px
+
+	&__prev,
+	&__next
+		position: relative
+		width: 30px
+		height: 30px
+
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			display: block
+			width: 12px
+			height: 12px
+			border-top: 2px solid $text
+			border-left: 2px solid $text
+
+	&__prev
+		&::before
+			transform: translate(-50%, -50%) rotate(-45deg)
+
+	&__next
+		&::before
+			transform: translate(-50%, -50%) rotate(135deg)
+
+	&__pagination
+		span
+			position: relative
+			width: 12px
+			height: 12px
+			background-color: transparent
+			opacity: 1 !important
+			border: 1px solid transparent
+			margin: 0 8px !important
+
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				display: block
+				width: 7px
+				height: 7px
+				border-radius: 50%
+				background-color: #d8d8d8
+				transition: all .6s
+
+		.swiper-pagination-bullet-active
+			border: 1px solid $accent
+
+			&::before
+				transform: scale(0)
+
+
+
+
 @import "media" // Always at the end
