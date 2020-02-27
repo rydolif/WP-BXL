@@ -11,6 +11,10 @@ $(function() {
   var swiper = new Swiper('.products__slider', {
     slidesPerView: 3,
     spaceBetween: 30,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.products__pagination',
       clickable: true,

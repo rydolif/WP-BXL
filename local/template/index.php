@@ -28,11 +28,11 @@
 
 <!-- 				<?php get_template_part( 'parts/search' ); ?>
  -->
-				<div class="products__header">
+<!-- 				<div class="products__header">
 					<h2>Популярное</h2>
 					<div class="products__prev"></div>
 					<div class="products__next"></div>
-				</div>
+				</div> -->
 
 				<div class="products__slider swiper-container">
 					<div class="swiper-wrapper">
